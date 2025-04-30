@@ -1,0 +1,185 @@
+/* Modern Blue & White Auth Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+.auth-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.auth-container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+form{
+    padding-right: 20px;
+}
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+    margin: 10px auto 0;
+    transition: width 0.3s ease;
+}
+
+.auth-container:hover h2::after {
+    width: 80px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.btn {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 110%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: center;
+    padding-right: 30px;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    position:center;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.toggle-section {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+.toggle-section a {
+    color: #007bff; /* Couleur bleue standard pour les liens */
+    text-decoration: none;}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 5px;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    position: center;
+}
+
+.toggle-btn:hover {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.errors {
+    background-color: #ffecec;
+    color: #e74c3c;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e74c3c;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading spinner */
+#loadingSpinner {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #3498db;
+    font-size: 14px;
+}
+
+/* Input icons */
+.form-group i {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+    position: center;
+    padding: 10px;
+}
+
+.form-control:focus + i {
+    color: #3498db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 30px 20px;
+    }
+}
+.error-message {
+    color: #ff3860;
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: center;
+}
